@@ -24,10 +24,6 @@ public interface ApiService {
 
     String GET_ARTICLE_LIST = "api/news/feed/v62/?refer=1&count=20&loc_mode=4&device_id=34960436458&iid=13136511752";
     String GET_COMMENT_LIST = "article/v2/tab_comments/";
-    //http://is.snssdk.com
-    //http://is.snssdk.com/api/news/feed/v54/?refer=1&count=20&min_behot_time=1498722625&last_refresh_sub_entrance_interval=1498724693&loc_mode=4&tt_from=pull（tab_tip） 新闻列表
-    //http://is.snssdk.com/article/v2/tab_comments/?group_id=6436886053704958466&item_id=6436886053704958466&offset=30&count=20 评论
-    //http://is.snssdk.com/2/article/information/v21/ 详情
 
     /**
      * 获取新闻列表
@@ -36,7 +32,8 @@ public interface ApiService {
      * @return
      */
     @GET(GET_ARTICLE_LIST)
-    Observable<NewsResponse> getNewsList(@Query("category") String category, @Query("min_behot_time") long lastTime, @Query("last_refresh_sub_entrance_interval") long currentTime);
+    Observable<NewsResponse> getNewsList(@Query("category") String category, @Query("min_behot_time") long lastTime,
+                                         @Query("last_refresh_sub_entrance_interval") long currentTime);
 
     /**
      * 获取新闻详情
@@ -54,7 +51,8 @@ public interface ApiService {
      * @return
      */
     @GET(GET_COMMENT_LIST)
-    Observable<CommentResponse> getComment(@Query("group_id") String groupId, @Query("item_id") String itemId, @Query("offset") String offset, @Query("count") String count);
+    Observable<CommentResponse> getComment(@Query("group_id") String groupId, @Query("item_id")
+            String itemId, @Query("offset") String offset, @Query("count") String count);
 
     /**
      * 获取视频数据json
@@ -71,6 +69,7 @@ public interface ApiService {
             "Origin:http://toutiao.iiilab.com"
 
     })
+
     @POST("http://service.iiilab.com/video/toutiao")
     Observable<VideoPathResponse> getVideoPath(@Query("link") String link,@Query("r") String r,@Query("s") String s);
 }

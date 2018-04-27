@@ -21,7 +21,6 @@ import rx.schedulers.Schedulers;
 
 public abstract class VideoPathDecoder {
 
-
     private static final String NICK = "chaychan";
 
     public void decodePath(String srcUrl) {
@@ -45,12 +44,10 @@ public abstract class VideoPathDecoder {
 
         webView.addJavascriptInterface(relation, NICK);//绑定JS和Java的联系类，以及使用到的昵称
 
-//        webView.loadUrl("file:///android_asset/parse.html");
         webView.loadUrl(srcUrl);
         webView.setWebViewClient(new WebViewClient(){
             @Override
             public void onPageFinished(WebView view, String url) {
-//                webView.loadUrl("javascript:getParseParam('" + srcUrl + "')");
                 UIUtils.postTaskDelay(new Runnable() {
                     @Override
                     public void run() {
@@ -68,7 +65,6 @@ public abstract class VideoPathDecoder {
                 "var path = videos[0].src;" +
                 "window.chaychan.onGetPath(path);" +
                 "})()");
-
     }
 
     private void sendRequest(String srcUrl,String r,String s) {

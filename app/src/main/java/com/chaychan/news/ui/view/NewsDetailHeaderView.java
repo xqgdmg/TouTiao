@@ -1,5 +1,6 @@
 package com.chaychan.news.ui.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -67,7 +68,8 @@ public class NewsDetailHeaderView extends FrameLayout {
         ButterKnife.bind(this, this);
     }
 
-    public void setDetail(NewsDetail detail,LoadWebListener listener) {
+    @SuppressLint("JavascriptInterface")
+    public void setDetail(NewsDetail detail, LoadWebListener listener) {
         mWebListener = listener;
 
         mTvTitle.setText(detail.title);

@@ -34,11 +34,8 @@ import butterknife.OnClick;
 import flyn.Eyes;
 
 /**
- * @author ChayChan
- * @description: 详情页查看图片的activity
- * @date 2017/8/23  11:02
+ * 详情页查看图片的activity
  */
-
 public class ImageViewPagerActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
 
     private static final String TAG = ImageViewPagerActivity.class.getSimpleName();
@@ -47,10 +44,8 @@ public class ImageViewPagerActivity extends BaseActivity implements ViewPager.On
 
     @Bind(R.id.vp_pics)
     ViewPager mVpPics;
-
     @Bind(R.id.tv_indicator)
     TextView mTvIndicator;
-
     @Bind(R.id.tv_save)
     TextView mTvSave;
 
