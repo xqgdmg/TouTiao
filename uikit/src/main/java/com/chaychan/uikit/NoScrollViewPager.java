@@ -24,7 +24,7 @@ public class NoScrollViewPager extends ViewPager {
 	public boolean onTouchEvent(MotionEvent arg0) {
 		return false;
 	}
-	
+
 	/**
 	 * 不拦截事件
 	 */
@@ -37,4 +37,5 @@ public class NoScrollViewPager extends ViewPager {
 	public boolean dispatchTouchEvent(MotionEvent ev) {
 		return super.dispatchTouchEvent(ev);
 	}
+
 }
