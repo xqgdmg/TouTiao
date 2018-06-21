@@ -15,8 +15,7 @@
         app:tipBackgroundColor="@color/color_D5E8F6"
         app:tipText="@string/net_unavailable"
         app:tipTextColor="@color/color_4592C6"
-        app:tipTextSize="14sp"
-        ></com.chaychan.uikit.TipView>
+        app:tipTextSize="14sp"/>
 
     <com.chaychan.uikit.refreshlayout.BGARefreshLayout
         android:id="@+id/refresh_layout"
